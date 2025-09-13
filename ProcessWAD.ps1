@@ -14,6 +14,12 @@ Get-ChildItem -Directory | ForEach-Object {
     $inputFile = ".\$state\ArchGeoMap.gpx"
     $outputFile = ".\$state\Processed.csv"
 
+    # Delete the output file if it already exists
+    if (Test-Path $outputFile) {
+        Write-Host "Removing $outputFile as it already exists"
+        Remove-Item $outputFile -Force
+    }
+
     Write-Host "Processing $state..."
     python ..\GPS-Tools\gpx2csv -i $inputFile -o $outputFile
 }
