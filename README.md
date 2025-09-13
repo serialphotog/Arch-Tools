@@ -19,3 +19,4 @@ If you're interested into diving deeper into the world of arch hunting, you migh
 # Current Tools
 
 - `ProcessWAD.ps1` - A quick script to process GPX files downloaded from the World Arch Database into a CSV file. I use this CSV file for cross referencing other data sources. 
+- `PrepareNABS.ps1` - A quick script to prepare my NABS CSV data by moving them into their own directories under normalized names. This is to prepare the data for further processing later.
